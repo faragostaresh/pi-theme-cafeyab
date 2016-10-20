@@ -1,0 +1,81 @@
+<?php
+// Options: interval, pause, height
+$options = (array) $block['options'];
+$items = $block['items'];
+$activeItem = array_shift($items);
+$count = count($items);
+$_this = $this;
+$width = $options['width'];
+$height = $options['height'];
+$render = function ($item) use ($_this, $width, $height)
+{
+    $caption = $_this->escape($item['caption']);
+    $description = !empty($item['desc']) ? $item['desc'] : '';
+
+    $width = $width ? 'width: '  . $width  . 'px;' : '';
+    $height = $height ? 'height: '  . $height . 'px;' : '';
+
+    if (empty($width) && empty($height)) {
+        $image = sprintf('<img src="%s" alt="%s" />',
+            $item['image'],
+            $caption
+        );
+    } else {
+        $image = sprintf('<img src="%s" alt="%s" style="%s%s" />',
+            $item['image'],
+            $caption,
+            $width,
+            $height
+        );
+    }
+
+
+    $content = '';
+    if (!empty($item['link'])) {
+        $content .= '<a target="_blank" href="' . $item['link'] . '" title="' . $caption . '">' . $image . '</a>';
+    } else {
+        $content .= $image;
+    }
+    if ($caption || $description) {
+        //$content .= '<div class="carousel-caption"><div class="col-md-12 col-sm-12 hidden-sm hidden-xs"><div class="animated slideInDown"><span>' . $caption . '</span></div><div class="list">' . $description . '</div></div></div>';
+    }
+    return $content;
+};
+//$carouselId = uniqid('carousel');
+$carouselId = 'hp-slider';
+?>
+    <div id="<?php echo $carouselId; ?>" class="carousel slide" data-ride="carousel">
+        <!-- <ol class="carousel-indicators">
+            <li data-target="#<?php echo $carouselId; ?>" data-slide-to="0" class="active"></li>
+            <?php for ($i = 1; $i <= $count; $i++) { ?>
+                <li data-target="#<?php echo $carouselId; ?>" data-slide-to="<?php echo $i; ?>"></li>
+            <?php } ?>
+        </ol> -->
+
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+            <div class="active item">
+                <?php echo $render($activeItem); ?>
+            </div>
+            <?php foreach ($items as $item) { ?>
+                <div class="item">
+                    <?php echo $render($item); ?>
+                </div>
+            <?php } ?>
+        </div>
+
+        <!-- Controls -->
+        <a class="carousel-arrow carousel-arrow-prev" href="#<?php echo $carouselId; ?>" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-arrow carousel-arrow-next" href="#<?php echo $carouselId; ?>" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>
+    </div>
+<?php
+$script = sprintf('$("#%s").carousel(%s);',
+    $carouselId,
+    json_encode($block['options'])
+);
+$this->footScript()->appendScript($script);
+?>

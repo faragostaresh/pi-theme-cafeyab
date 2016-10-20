@@ -1,0 +1,64 @@
+<div class="user-bar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <div class="navbar navbar-default">
+        <ul class="nav navbar-nav pi-navbar-nav">
+            <?php if (!$block['user']['uid']) { ?>
+                <li>
+                    <a itemprop="url" title="<?php echo _b('Login'); ?>" href="<?php echo $block['user']['login']; ?>">
+                        <span itemprop="name">
+                            <i class="fa fa-sign-in"></i>
+                            <?php echo _b('Login'); ?>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" title="<?php echo _b('Register'); ?>" href="<?php echo $block['user']['register']; ?>">
+                        <span itemprop="name">
+                            <i class="fa fa-arrow-circle-down"></i>
+                            <?php echo _b('Register'); ?>
+                        </span>
+                    </a>
+                </li>
+            <?php } else { ?>
+                <li class="dropdown">
+                    <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                        <?php echo $block['user']['avatar']; ?>
+                        <?php echo _escape($block['user']['name']); ?>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                        <li><a title="پیگیری سفارش ها" href="https://www.cafeyab.com/order">پیگیری سفارش ها</a></li>
+                        <li><a title="فهرست علاقه مندی ها" href="https://www.cafeyab.com/guide/favourite">فهرست علاقه مندی ها</a></li>
+                        <li><a title="تنظیمات حساب کاربری" href="https://www.cafeyab.com/user/account/">تنظیمات حساب کاربری</a></li>
+                        <li><a title="تغییر کلمه عبور" href="https://www.cafeyab.com/user/password/">تغییر کلمه عبور</a></li>
+                        <li><a title="تغییر آواتار" href="https://www.cafeyab.com/user/avatar/">تغییر آواتار</a></li>
+                        <li><a title="به روز کردن پروفایل پایه" href="https://www.cafeyab.com/user/profile/edit.profile/group/7">به روز کردن پروفایل پایه</a></li>
+                        <li><a title="به روز کردن اطلاعات ثبت سفارش" href="https://www.cafeyab.com/user/profile/edit.profile/group/8">به روز کردن اطلاعات ثبت سفارش</a></li>
+                    </ul>
+                </li>
+<?php if (isset($block['user']['message'])) { ?>
+        <li>
+             <a id="member-message" href="https://www.cafeyab.com/message" title="<?php echo _b('Message'); ?>">
+                <?php echo _b('Message'); ?> <span class="badge"><?php echo $block['user']['count']; ?></span>
+            </a>
+        </li>
+        <?php } ?>
+                <li>
+                    <a title="<?php echo _b('Logout'); ?>" href="<?php echo Pi::url($block['user']['logout']); ?>">
+                        <i class="fa fa-power-off"></i>
+                        <?php echo _b('Logout'); ?>
+                    </a>
+                </li>
+            <?php } ?>
+            <li>
+                <a itemprop="url" title="درباره ما" href="<?php echo Pi::url($this->url('home')); ?>page/about-us">
+                    <span itemprop="name"><i class="fa fa-info"></i> درباره ما</span>
+                </a>
+            </li>
+            <li>
+                <a itemprop="url" title="تماس با ما" href="<?php echo Pi::url($this->url('home')); ?>contact">
+                    <span itemprop="name"><i class="fa fa-envelope"></i> تماس با ما</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
