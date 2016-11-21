@@ -1551,6 +1551,20 @@ form .icon-question-sign {
 }
 
 /* video */
+#pi-video .thumbnail img {
+    height: 135px;
+}
+
+#pi-video .thumbnail .caption {
+    height: 60px;
+}
+
+#pi-video .thumbnail .caption h3 {
+    font-size: 1em;
+    margin: 3px 0;
+    padding: 3px 0;
+}
+
 .video-block-more {
     text-align: left;
 }
