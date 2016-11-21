@@ -35,13 +35,13 @@
                         <li><a title="به روز کردن اطلاعات ثبت سفارش" href="https://www.cafeyab.com/user/profile/edit.profile/group/8">به روز کردن اطلاعات ثبت سفارش</a></li>
                     </ul>
                 </li>
-<?php if (isset($block['user']['message'])) { ?>
-        <li>
-             <a id="member-message" href="https://www.cafeyab.com/message" title="<?php echo _b('Message'); ?>">
-                <?php echo _b('Message'); ?> <span class="badge"><?php echo $block['user']['count']; ?></span>
-            </a>
-        </li>
-        <?php } ?>
+                <?php if (isset($block['user']['message'])) { ?>
+                    <li>
+                        <a id="member-message" href="https://www.cafeyab.com/message" title="<?php echo _b('Message'); ?>">
+                            <?php echo _b('Message'); ?> <span class="badge"><?php echo $block['user']['count']; ?></span>
+                        </a>
+                    </li>
+                <?php } ?>
                 <li>
                     <a title="<?php echo _b('Logout'); ?>" href="<?php echo Pi::url($block['user']['logout']); ?>">
                         <i class="fa fa-power-off"></i>
@@ -49,12 +49,12 @@
                     </a>
                 </li>
             <?php } ?>
-            <li>
+            <li class="hidden-xs">
                 <a itemprop="url" title="درباره ما" href="<?php echo Pi::url($this->url('home')); ?>page/about-us">
                     <span itemprop="name"><i class="fa fa-info"></i> درباره ما</span>
                 </a>
             </li>
-            <li>
+            <li class="hidden-xs">
                 <a itemprop="url" title="تماس با ما" href="<?php echo Pi::url($this->url('home')); ?>contact">
                     <span itemprop="name"><i class="fa fa-envelope"></i> تماس با ما</span>
                 </a>
