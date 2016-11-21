@@ -177,6 +177,11 @@ $platform = Pi::service('browser')->getPlatform();
                                         <span itemprop="name">کافه‌ها روی نقشه</span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>video" title="ویدیو">
+                                        <span itemprop="name">ویدیو</span>
+                                    </a>
+                                </li>
                                 <?php if (!in_array($platform, array('Android', 'Ios'))) { ?>
                                     <li class="dropdown yamm-fw">
                                         <a aria-expanded="false" itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="فروشگاه" data-toggle="dropdown" class="dropdown-toggle dropdown-toggle-shop"><span itemprop="name">فروشگاه</span> <b class="caret"></b></a>
@@ -275,6 +280,19 @@ $platform = Pi::service('browser')->getPlatform();
     </div>
 </header>
 <section class="pi-section">
+    <?php if (isset($blocks['99'])) { ?>
+        <div class="pi-top-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 pi-zone-8">
+                        <?php foreach ($blocks['99'] as $block) {
+                            include $blockTemplate;
+                        } ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
     <div class="pi-main-container">
         <div class="container">
             <!--[if lt IE 9]>
@@ -424,13 +442,6 @@ $platform = Pi::service('browser')->getPlatform();
                                 </div>
                             </div>
                         <?php } ?>
-                    </div>
-                <?php } ?>
-                <?php if (isset($blocks['99'])) { ?>
-                    <div class="col-md-12 pi-zone-8">
-                        <?php foreach ($blocks['99'] as $block) {
-                            include $blockTemplate;
-                        } ?>
                     </div>
                 <?php } ?>
             </div>

@@ -541,7 +541,24 @@ form .icon-question-sign {
 }
 
 /* section */
-.pi-section {
+.pi-top-container {
+    padding: 0;
+    background-color: #efebe9;
+}
+
+.pi-top-container .thumbnail {
+    background: #efebe9;
+    border-color: #efebe9;
+    max-height: 140px;
+}
+
+.pi-top-container .thumbnail h4 {
+    font-size: .9em;
+    margin: 3px 0;
+    padding: 0;
+}
+
+.pi-main-container {
     padding: 20px 0;
     background-color: #ffffff;
 }
@@ -1531,4 +1548,9 @@ form .icon-question-sign {
 
 .recent-event-single img {
     padding-top: 2px;
+}
+
+/* video */
+.video-block-more {
+    text-align: left;
 }
