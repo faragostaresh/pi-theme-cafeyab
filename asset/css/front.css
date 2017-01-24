@@ -820,6 +820,13 @@ form .icon-question-sign {
     margin-bottom: 15px;
 }
 
+@media (min-width: 768px) {
+    .guide-block img {
+        width: 100%;
+        height: 125px;
+    }
+}
+
 /* comment */
 #pi-comment-lead {
     margin-top: 15px;
