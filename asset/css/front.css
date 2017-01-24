@@ -100,7 +100,7 @@ h5, h6 {
 }
 
 .pi-block-title {
-    padding: 10px;
+    padding: 5px 0;
 }
 
 .pi-block-title h3 {
@@ -792,12 +792,12 @@ form .icon-question-sign {
     width: 175px !important;
 }
 
-.guide-block-item .itemBox img {
+/* .guide-block-item .itemBox img {
     height: 135px;
-}
+} */
 
 .guide-block-item .thumbnail .caption {
-    height: 100px;
+    height: 30px;
 }
 
 .guide-search-block-form span {
@@ -814,13 +814,13 @@ form .icon-question-sign {
     color: #878686;
 }
 
-.guide-block-new .caption {
+/* .guide-block-new .caption {
     min-height: 110px !important;
 }
 
 .guide-block-new img {
     height: 133px !important;
-}
+} */
 
 .guide-block-random .media {
     border-bottom: 1px solid #ddd;
@@ -830,8 +830,12 @@ form .icon-question-sign {
 
 @media (min-width: 768px) {
     .guide-block img {
-        width: 100%;
-        height: 125px;
+        width: 100% !important;
+        height: 125px !important;
+    }
+
+    .guide-block .caption {
+        height: 60px !important;
     }
 }
 
