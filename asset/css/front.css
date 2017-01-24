@@ -8,6 +8,8 @@ body {
     animation-duration: 4s !important;
     animation-delay: 1s !important;
     background-color: #FFFFFF;
+    font-size: 12px;
+    line-height: 24px;
 }
 
 a {
@@ -20,19 +22,25 @@ a:hover {
 }
 
 h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    font-family: 'Vazir-Bold';
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size: 1.2em;
+    font-family: 'Vazir-Bold';
 }
 
 h3, h4 {
-    font-size: 1.2em;
+    font-size: 1.1em;
+    font-family: 'Vazir-Bold';
+    padding: 2px 0;
+    margin: 1px 0;
 }
 
 h5, h6 {
     font-size: 1em;
+    font-family: 'Vazir-Bold';
 }
 
 /* Bootstrap custom */

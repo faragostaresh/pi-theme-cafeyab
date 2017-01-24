@@ -117,24 +117,24 @@ $platform = Pi::service('browser')->getPlatform();
             </a>
         </div>
     <?php } elseif (in_array($platform, array('iPhone', 'iPad', 'Ios'))) { ?>
-    <div class="pi-header-app">
-        <a href="https://itunes.apple.com/us/app/cafeyab-kafh-yab/id1071729005?ls=1&mt=8" title="دریافت از اپ استور">
-            <img src="<?php echo $this->assetTheme('image/app-ios.png'); ?>" alt="دریافت از اپ استور">
-        </a>
-    </div>
+        <div class="pi-header-app">
+            <a href="https://itunes.apple.com/us/app/cafeyab-kafh-yab/id1071729005?ls=1&mt=8" title="دریافت از اپ استور">
+                <img src="<?php echo $this->assetTheme('image/app-ios.png'); ?>" alt="دریافت از اپ استور">
+            </a>
+        </div>
     <?php } ?>
-        <div class="pi-header-top">
-            <div class="container">
-                <div class="row">
-                    <div class="pi-header-user col-md-6 col-xs-12 animated fadeInDown">
-                        <?php echo $this->widget('system-user-bar'); ?>
-                    </div>
-                    <div class="pi-header-search col-md-6 col-xs-12 text-right animated slideInLeft">
-                        <?php echo $this->widget('search-search'); ?>
-                    </div>
+    <div class="pi-header-top">
+        <div class="container">
+            <div class="row">
+                <div class="pi-header-user col-md-6 col-xs-12 animated fadeInDown">
+                    <?php echo $this->widget('system-user-bar'); ?>
+                </div>
+                <div class="pi-header-search col-md-6 col-xs-12 text-right animated slideInLeft">
+                    <?php echo $this->widget('search-search'); ?>
                 </div>
             </div>
         </div>
+    </div>
     <div class="pi-header-body">
         <div class="container">
             <div class="row">
@@ -182,7 +182,7 @@ $platform = Pi::service('browser')->getPlatform();
                                         <span itemprop="name">ویدیو</span>
                                     </a>
                                 </li>
-                                <?php if (!in_array($platform, array('Android', 'Ios'))) { ?>
+                                <?php /* if (!in_array($platform, array('Android', 'iPhone', 'iPad', 'Ios'))) { ?>
                                     <li class="dropdown yamm-fw">
                                         <a aria-expanded="false" itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="فروشگاه" data-toggle="dropdown" class="dropdown-toggle dropdown-toggle-shop"><span itemprop="name">فروشگاه</span> <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
@@ -240,15 +240,20 @@ $platform = Pi::service('browser')->getPlatform();
                                             <span itemprop="name">فروشگاه</span>
                                         </a>
                                     </li>
-                                <?php } ?>
+                                <?php } */ ?>
+                                <li>
+                                    <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="فروشگاه">
+                                        <span itemprop="name">فروشگاه</span>
+                                    </a>
+                                </li>
                                 <li>
                                     <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>event" title="رویداد‌ها">
                                         <span itemprop="name">رویداد‌ها</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>blog" title="وبلاگ">
-                                        <span itemprop="name">وبلاگ</span>
+                                    <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>plans" title="بسته ها">
+                                        <span itemprop="name">بسته ها</span>
                                     </a>
                                 </li>
                                 <li>
@@ -267,10 +272,10 @@ $platform = Pi::service('browser')->getPlatform();
                                     </a>
                                 </li>
                             </ul>
-                            <?php if (in_array($platform, array('Android', 'Ios'))) { ?>
-                                <div class=clearfix">
-                                    <?php echo $this->widget('system-user-bar'); ?>
-                                </div>
+                            <?php if (in_array($platform, array('Android', 'iPhone', 'iPad', 'Ios'))) { ?>
+                            <div class=clearfix">
+                                <?php echo $this->widget('system-user-bar'); ?>
+                            </div>
                             <?php } ?>
                         </div>
                     </div>
@@ -306,12 +311,12 @@ $platform = Pi::service('browser')->getPlatform();
                 </div>
             </div>
             <![endif]-->
-            <?php if (!in_array($platform, array('Android', 'Ios'))) { ?>
+            <?php if (!in_array($platform, array('Android', 'iPhone', 'iPad', 'Ios'))) { ?>
                 <?php if ($breadcrumbs) { echo $breadcrumbs; } ?>
             <?php } ?>
             <!-- Flash messenger -->
             <?php include $this->template('flash-messenger'); ?>
-            <?php if (in_array($platform, array('Android', 'Ios'))) { ?>
+            <?php if (in_array($platform, array('Android', 'iPhone', 'iPad', 'Ios'))) { ?>
                 <div class="clearfix">
                     <div class="row">
                         <div class="col-xs-12">
@@ -449,7 +454,7 @@ $platform = Pi::service('browser')->getPlatform();
     </div>
 </section>
 <!-- Bottom foot zone -->
-<?php if (!in_array($platform, array('Android', 'Ios'))) { ?>
+<?php if (!in_array($platform, array('Android', 'iPhone', 'iPad', 'Ios'))) { ?>
     <section class="pi-section-bottom pi-zone-99 hidden-xs">
         <div class="pi-section-app">
             <div class="container">
@@ -470,8 +475,8 @@ $platform = Pi::service('browser')->getPlatform();
                                 </a>
                             </li>
                             <li><a href="https://itunes.apple.com/us/app/cafeyab-kafh-yab/id1071729005?ls=1&mt=8" title="دریافت از اپ استور" >
-                                <img src="<?php echo $this->assetTheme('image/app-ios.png'); ?>" alt="دریافت از اپ استور">
-</a>
+                                    <img src="<?php echo $this->assetTheme('image/app-ios.png'); ?>" alt="دریافت از اپ استور">
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -576,7 +581,5 @@ $platform = Pi::service('browser')->getPlatform();
     ]
 }
 </script>
-<?php /* <script src="http://feelinger.com/cp/minipopups.js"></script>
-<script>FeelPop.init([window.location.hostname]);FeelPop.showfixed();</script> */ ?>
 </body>
 </html>
