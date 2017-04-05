@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="262dadad-9ee2-4195-8c3f-334d05ea3fe4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/cafeyab.iml" afterPath="$PROJECT_DIR$/.idea/cafeyab.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module/system/template/block/user-bar.phtml" afterPath="$PROJECT_DIR$/module/system/template/block/user-bar.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/css/front.css" afterPath="$PROJECT_DIR$/asset/css/front.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/layout-front.phtml" afterPath="$PROJECT_DIR$/template/layout-front.phtml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,14 +29,35 @@
       <file leaf-file-name="layout-front.phtml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="581" selection-end-column="7" />
+            <state relative-caret-position="476">
+              <caret line="270" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="581" selection-end-column="7" />
+              <folding>
+                <element signature="e#15781#15909#0#PHP" expanded="true" />
+                <marker date="1491374958776" expanded="true" signature="17384:17957" ph="..." />
+                <marker date="1491374958776" expanded="true" signature="17424:17938" ph="..." />
+                <marker date="1491374958776" expanded="true" signature="17477:17915" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="front.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asset/css/front.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="973" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1593" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>فروشگاه</find>
+      <find>shop</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,6 +66,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/module/system/template/block/user-bar.phtml" />
+        <option value="$PROJECT_DIR$/asset/css/front.css" />
+        <option value="$PROJECT_DIR$/template/layout-front.phtml" />
       </list>
     </option>
   </component>
@@ -76,6 +98,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -142,9 +165,40 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cafeyab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cafeyab" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cafeyab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cafeyab" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,18 +230,27 @@
       <workItem from="1491370310251" duration="1000" />
       <workItem from="1491370380492" duration="9000" />
       <workItem from="1491371712262" duration="449000" />
-      <workItem from="1491372499793" duration="2000" />
+      <workItem from="1491372499793" duration="123000" />
+      <workItem from="1491374575384" duration="548000" />
     </task>
+    <task id="LOCAL-00001" summary="work on theme">
+      <created>1491372513965</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1491372513965</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="461000" />
+    <option name="totallyTimeSpent" value="1130000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="994" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -212,11 +275,36 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="work on theme" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on theme" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/module/system/template/block/user-bar.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1998">
+          <caret line="111" column="13" lean-forward="false" selection-start-line="111" selection-start-column="13" selection-end-line="111" selection-end-column="13" />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1491374958776" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1491374958776" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1491374958776" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/module/system/template/block/user-bar.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -229,7 +317,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="581" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1491374958776" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1491374958776" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1491374958776" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -241,11 +334,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/front.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="973" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1593" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="581" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="476">
+          <caret line="270" column="17" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="581" selection-end-column="7" />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1491374958776" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1491374958776" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1491374958776" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

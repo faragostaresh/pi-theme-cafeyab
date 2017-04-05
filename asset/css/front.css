@@ -967,6 +967,11 @@ form .icon-question-sign {
     border-color: #ddd;
 }
 
+.shop .pi-item-list .pi-item-box img {
+    width: 133px;
+    height: 200px;
+}
+
 .shop-block-product .owl-carousel {
     height: 290px !important;
 }

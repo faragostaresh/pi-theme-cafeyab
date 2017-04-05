@@ -181,7 +181,7 @@ $platform = Pi::service('browser')->getPlatform();
                                 </li>
                                 <?php /* if (!in_array($platform, array('Android', 'iPhone', 'iPad', 'Ios'))) { ?>
                                     <li class="dropdown yamm-fw">
-                                        <a aria-expanded="false" itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="فروشگاه" data-toggle="dropdown" class="dropdown-toggle dropdown-toggle-shop"><span itemprop="name">فروشگاه</span> <b class="caret"></b></a>
+                                        <a aria-expanded="false" itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="محصولات تخصصی" data-toggle="dropdown" class="dropdown-toggle dropdown-toggle-shop"><span itemprop="name">محصولات تخصصی</span> <b class="caret"></b></a>
                                         <ul class="dropdown-menu">
                                             <li class="grid-menu">
                                                 <div class="row">
@@ -233,14 +233,14 @@ $platform = Pi::service('browser')->getPlatform();
                                     </li>
                                 <?php } else { ?>
                                     <li>
-                                        <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="فروشگاه">
-                                            <span itemprop="name">فروشگاه</span>
+                                        <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="محصولات تخصصی">
+                                            <span itemprop="name">محصولات تخصصی</span>
                                         </a>
                                     </li>
                                 <?php } */ ?>
                                 <li>
-                                    <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="فروشگاه">
-                                        <span itemprop="name">فروشگاه</span>
+                                    <a itemprop="url" href="<?php echo Pi::url($this->url('home')); ?>shop" title="محصولات تخصصی">
+                                        <span itemprop="name">محصولات تخصصی</span>
                                     </a>
                                 </li>
                                 <li>
@@ -260,10 +260,10 @@ $platform = Pi::service('browser')->getPlatform();
                                 </li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right pi-navbar-nav animated fadeInUp">
-                                <li>
+                                <?php /* <li>
                                     <?php echo $this->widget('shop-basket'); ?>
-                                </li>
-                                <li class="active hidden-xs">
+                                </li> */ ?>
+                                <li class="active">
                                     <a itemprop="url" class="btn btn-primary" href="<?php echo Pi::url($this->url('home')); ?>guide/manage" title="ثبت و مدیریت کافه">
                                         <span itemprop="name">ثبت و مدیریت کافه</span>
                                     </a>
@@ -508,7 +508,7 @@ $platform = Pi::service('browser')->getPlatform();
                     </div>
                     <div class="col-md-4 col-sm-6 col-xs-6">
                         <ul class="list-unstyled">
-                            <li><a title="فروشگاه" href="https://www.cafeyab.com/shop"><i class="fa fa-angle-left"></i> فروشگاه</a></li>
+                            <li><a title="محصولات تخصصی" href="https://www.cafeyab.com/shop"><i class="fa fa-angle-left"></i> محصولات تخصصی</a></li>
                             <li><a title="قهوه" href="https://www.cafeyab.com/shop/Coffee"><i class="fa fa-angle-left"></i> قهوه</a></li>
                             <li><a title="قهوه‌ساز‌ها" href="https://www.cafeyab.com/shop/Coffee-makers"><i class="fa fa-angle-left"></i> قهوه‌ساز‌ها</a></li>
                             <li><a title="دمنوش و چای" href="https://www.cafeyab.com/shop/herbal-tea"><i class="fa fa-angle-left"></i> دمنوش و چای</a></li>
