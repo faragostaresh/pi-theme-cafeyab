@@ -5,18 +5,6 @@ $this->doctype('HTML5');
 // Load translation data
 $this->i18nTheme();
 
-// Get module name
-$module = Pi::service('module')->current();
-
-// Load jQuery
-if ($module == 'system') {
-    $this->jQuery(array(
-        'extension/owl.carousel.min.js',
-    ));
-} else {
-    $this->jquery();
-}
-
 //HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
 $this->js(array(
     pi::url('static/js/html5shiv.js') => array(
@@ -27,6 +15,9 @@ $this->js(array(
     ),
 ));
 
+// Load jQuery
+$this->jquery();
+
 // Load Bootstrap css/js and font-awesome
 $this->bootstrap(array(
     'js/bootstrap.min.js',
@@ -34,13 +25,13 @@ $this->bootstrap(array(
 ));
 
 // Load front.css
-$this->css(array(
-    $this->assetTheme('css/front.css'),
-//$this->assetTheme('css/animate.css')
-));
+$this->css($this->assetTheme('css/front.css'));
 
 // Load localization css
 $this->css($this->assetLocale('locale.css'));
+
+// Load front.js on footer
+//$this->footScript()->appendFile($this->assetTheme('js/front.js'));
 
 // Apple icons
 // Apple icon for iphone
@@ -85,6 +76,9 @@ $this->headLink(array(
 // Load google analytics code
 $this->ga();
 
+// Get module name
+$module = Pi::service('module')->current();
+
 // Get navigation
 $navigation = $this->nav('front');
 
@@ -93,14 +87,17 @@ $blocks = $this->blocks();
 $blockTemplate = $this->template('block');
 
 // Get breadcrumbs
-$breadcrumbs = $this->breadcrumb(array('prefix' => array(array('label' => __('Home'), 'href' => $this->url('home')))));
-
-// Load front.js on footer
-$this->footScript()->appendFile($this->assetTheme('js/front.js'));
+$breadcrumbs = $this->breadcrumb(
+    array('prefix' => array(
+        array(
+            'label' => __('Home'),
+            'href' => Pi::url($this->url('home'))
+        )
+    ))
+);
 
 // Set platform
 $platform = Pi::service('browser')->getPlatform();
-
 ?>
 <!DOCTYPE HTML>
 <html lang="<?php echo $locale; ?>">
@@ -108,7 +105,7 @@ $platform = Pi::service('browser')->getPlatform();
     <meta charset="<?php echo $charset; ?>">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 </head>
-<body id="pi-<?php echo $module; ?>" class="pi-locale-<?php echo $locale; ?>">
+<body id="pi-<?php echo $module; ?>" class="pi-locale-<?php echo $locale; ?> pi-front">
 <header class="pi-header">
     <?php if ($platform == 'Android') { ?>
         <div class="pi-header-app">

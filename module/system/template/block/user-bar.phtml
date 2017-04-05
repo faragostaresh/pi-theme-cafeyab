@@ -1,21 +1,27 @@
-<div class="user-bar" itemscope itemtype="http://schema.org/SiteNavigationElement">
+<?php
+$userSection = $this->isUserSection(Pi::service('module')->current());
+$originalBlockType = $block['type'];
+
+if($block['type'] == 'mixed' || $block['type'] == 'mixed_light'){
+    $block['type'] = $userSection ? 'flat' : 'dropdown';
+}
+$floatClass = ($block['float'] == 'left') ? '' : ' navbar-right';
+
+$modalEnabled = Pi::user()->config('enable_modal');
+?>
+<div class="user-bar">
     <div class="navbar navbar-default">
         <ul class="nav navbar-nav pi-navbar-nav">
             <?php if (!$block['user']['uid']) { ?>
-                <li>
-                    <a itemprop="url" title="<?php echo _b('Login'); ?>" href="<?php echo $block['user']['login']; ?>">
-                        <span itemprop="name">
-                            <i class="fa fa-sign-in"></i>
-                            <?php echo _b('Login'); ?>
-                        </span>
+                <li class="item-login">
+                    <a href="<?php echo $modalEnabled ? '#' : $block['user']['login'] ?>" data-target="#loginRegisterModal" data-action="login" <?php if($modalEnabled) : ?>data-toggle="modal"<?php endif; ?> title="<?php echo _b('Login'); ?>">
+                        <i class="fa fa-sign-in"></i>
+                        <span class="hidden-sm hidden-md"><?php echo _b('Login'); ?></span>
                     </a>
                 </li>
-                <li>
-                    <a itemprop="url" title="<?php echo _b('Register'); ?>" href="<?php echo $block['user']['register']; ?>">
-                        <span itemprop="name">
-                            <i class="fa fa-arrow-circle-down"></i>
-                            <?php echo _b('Register'); ?>
-                        </span>
+                <li class="item-register">
+                    <a href="<?php echo $modalEnabled ? '#' : $block['user']['register'] ?>" data-target="#loginRegisterModal" data-action="register" <?php if($modalEnabled) : ?>data-toggle="modal"<?php endif; ?> title="<?php echo _b('Register'); ?>">
+                        <?php echo _b('Register'); ?>
                     </a>
                 </li>
             <?php } else { ?>
@@ -43,22 +49,21 @@
                     </li>
                 <?php } ?>
                 <li>
-                    <a title="<?php echo _b('Logout'); ?>" href="<?php echo Pi::url($block['user']['logout']); ?>">
-                        <i class="fa fa-power-off"></i>
+                    <a href="<?php echo $block['user']['logout']; ?>" title="<?php echo _b('Logout'); ?>">
+                        <i class="fa fa-sign-out"></i>
                         <?php echo _b('Logout'); ?>
                     </a>
                 </li>
             <?php } ?>
-            <li class="hidden-xs">
-                <a itemprop="url" title="درباره ما" href="<?php echo Pi::url($this->url('home')); ?>page/about-us">
-                    <span itemprop="name"><i class="fa fa-info"></i> درباره ما</span>
-                </a>
-            </li>
-            <li class="hidden-xs">
-                <a itemprop="url" title="تماس با ما" href="<?php echo Pi::url($this->url('home')); ?>contact">
-                    <span itemprop="name"><i class="fa fa-envelope"></i> تماس با ما</span>
-                </a>
-            </li>
         </ul>
     </div>
 </div>
+<?php if ($modalEnabled && !$block['user']['uid']) {
+    ob_start();
+    include(Pi::path('module/system/template/block/partial/login-register-modal.phtml'));
+    $modalContent = ob_get_clean();
+
+    /* @var \Pi\View\Helper\FootScript $footScript */
+    $footScript = $this->plugin('footScript');
+    $footScript->addHtml($modalContent);
+} ?>
