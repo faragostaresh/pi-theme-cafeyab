@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="262dadad-9ee2-4195-8c3f-334d05ea3fe4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/css/front.css" afterPath="$PROJECT_DIR$/asset/css/front.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/css/style.css" afterPath="$PROJECT_DIR$/asset/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/layout-style.phtml" afterPath="$PROJECT_DIR$/template/layout-style.phtml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,7 +19,7 @@
       <file leaf-file-name="layout-front.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
+            <state relative-caret-position="1962">
               <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="35" />
               <folding>
                 <element signature="e#15781#15909#0#PHP" expanded="true" />
@@ -30,11 +31,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="front.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="front.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/asset/css/front.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="924" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1598" selection-end-column="1" />
+            <state relative-caret-position="163">
+              <caret line="926" column="28" lean-forward="false" selection-start-line="926" selection-start-column="28" selection-end-line="926" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout-style.phtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/template/layout-style.phtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/asset/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="12" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="175" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -58,6 +79,8 @@
         <option value="$PROJECT_DIR$/module/system/template/block/user-bar.phtml" />
         <option value="$PROJECT_DIR$/template/layout-front.phtml" />
         <option value="$PROJECT_DIR$/asset/css/front.css" />
+        <option value="$PROJECT_DIR$/template/layout-style.phtml" />
+        <option value="$PROJECT_DIR$/asset/css/style.css" />
       </list>
     </option>
   </component>
@@ -91,6 +114,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -191,7 +215,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -232,7 +255,10 @@
       <workItem from="1491399610328" duration="22000" />
       <workItem from="1494427600678" duration="800000" />
       <workItem from="1494431681175" duration="55000" />
-      <workItem from="1494434700646" duration="117000" />
+      <workItem from="1494434700646" duration="129000" />
+      <workItem from="1494436978266" duration="5000" />
+      <workItem from="1494437242533" duration="173000" />
+      <workItem from="1494438251457" duration="358000" />
     </task>
     <task id="LOCAL-00001" summary="work on theme">
       <created>1491372513965</created>
@@ -255,17 +281,24 @@
       <option name="project" value="LOCAL" />
       <updated>1494427709948</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="work on theme">
+      <created>1494434819704</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1494434819704</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2760000" />
+    <option name="totallyTimeSpent" value="3308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="994" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34087238" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3578352" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -299,6 +332,69 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="35" />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1494427705822" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/front.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16668">
+          <caret line="926" column="28" lean-forward="true" selection-start-line="926" selection-start-column="28" selection-end-line="926" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="35" />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1494427705822" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/front.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16848">
+          <caret line="936" column="11" lean-forward="false" selection-start-line="936" selection-start-column="11" selection-end-line="936" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1962">
+          <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="35" />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1494427705822" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/front.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16848">
+          <caret line="936" column="11" lean-forward="true" selection-start-line="936" selection-start-column="11" selection-end-line="936" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -464,7 +560,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
+        <state relative-caret-position="1962">
           <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="35" />
           <folding>
             <element signature="e#15781#15909#0#PHP" expanded="true" />
@@ -477,8 +573,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/asset/css/front.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="924" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1598" selection-end-column="1" />
+        <state relative-caret-position="163">
+          <caret line="926" column="28" lean-forward="false" selection-start-line="926" selection-start-column="28" selection-end-line="926" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/layout-style.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="8" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="175" selection-end-column="1" />
           <folding />
         </state>
       </provider>
