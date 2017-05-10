@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="262dadad-9ee2-4195-8c3f-334d05ea3fe4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/layout-front.phtml" afterPath="$PROJECT_DIR$/template/layout-front.phtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/asset/css/front.css" afterPath="$PROJECT_DIR$/asset/css/front.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,17 +15,27 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout-front.phtml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout-front.phtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="78" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="581" selection-end-column="7" />
+            <state relative-caret-position="401">
+              <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="35" />
               <folding>
                 <element signature="e#15781#15909#0#PHP" expanded="true" />
                 <marker date="1494427705822" expanded="true" signature="17384:17957" ph="..." />
                 <marker date="1494427705822" expanded="true" signature="17424:17938" ph="..." />
                 <marker date="1494427705822" expanded="true" signature="17477:17915" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="front.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/asset/css/front.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="924" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1598" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,8 +56,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/module/system/template/block/user-bar.phtml" />
-        <option value="$PROJECT_DIR$/asset/css/front.css" />
         <option value="$PROJECT_DIR$/template/layout-front.phtml" />
+        <option value="$PROJECT_DIR$/asset/css/front.css" />
       </list>
     </option>
   </component>
@@ -80,7 +90,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,7 +191,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -220,7 +230,9 @@
       <workItem from="1491374575384" duration="560000" />
       <workItem from="1491380512331" duration="624000" />
       <workItem from="1491399610328" duration="22000" />
-      <workItem from="1494427600678" duration="106000" />
+      <workItem from="1494427600678" duration="800000" />
+      <workItem from="1494431681175" duration="55000" />
+      <workItem from="1494434700646" duration="117000" />
     </task>
     <task id="LOCAL-00001" summary="work on theme">
       <created>1491372513965</created>
@@ -236,17 +248,24 @@
       <option name="project" value="LOCAL" />
       <updated>1491375126955</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="work on theme">
+      <created>1494427709948</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1494427709948</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1894000" />
+    <option name="totallyTimeSpent" value="2760000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="994" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34087238" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -280,6 +299,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1494427705822" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#15781#15909#0#PHP" expanded="true" />
+            <marker date="1494427705822" expanded="true" signature="17384:17957" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17424:17938" ph="..." />
+            <marker date="1494427705822" expanded="true" signature="17477:17915" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/module/system/template/block/user-bar.phtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -417,24 +462,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/asset/css/front.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17514">
-          <caret line="973" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1593" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/layout-front.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="78" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="581" selection-end-column="7" />
+        <state relative-caret-position="401">
+          <caret line="109" column="35" lean-forward="false" selection-start-line="109" selection-start-column="28" selection-end-line="109" selection-end-column="35" />
           <folding>
             <element signature="e#15781#15909#0#PHP" expanded="true" />
             <marker date="1494427705822" expanded="true" signature="17384:17957" ph="..." />
             <marker date="1494427705822" expanded="true" signature="17424:17938" ph="..." />
             <marker date="1494427705822" expanded="true" signature="17477:17915" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset/css/front.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="924" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1598" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

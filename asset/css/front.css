@@ -932,6 +932,11 @@ form .icon-question-sign {
     margin: 0;
 }
 
+.itemSingleTitle {
+    background: #fff;
+    padding: 15px;
+}
+
 /* shop */
 /* #pi-shop .pi-section {
     background-color: #f2f2f2;
