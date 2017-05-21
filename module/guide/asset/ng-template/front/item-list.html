@@ -1,0 +1,210 @@
+<div class="clearfix pi-item-list">
+    <div class="col-xs-3">
+        <div class="pi-item-search-form clearfix well well-sm">
+            <div class="page-header">
+                <h3>{{'SEARCH' | translate}}</h3>
+            </div>
+            <form id="list-filter" ng-submit="filterAction()">
+                <div class="form-group">
+                    <label>{{'TITLE' | translate}}</label>
+                    <input type="text" class="form-control" ng-model="filter.title" ng-change="filterAction()"
+                           ng-model-options="{ debounce: 5000 }">
+                </div>
+                <div class="form-group">
+                    <label>{{'LOCATION' | translate}}</label>
+                    <select class="form-control" ng-model="filter.location" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">{{'ALL' | translate}}</option>
+                        <option ng-repeat="locationSingle in locationList" value="{{locationSingle.slug}}">
+                            {{locationSingle.title}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">Wi-Fi</label>
+                    <select class="form-control" ng-model="filter.wifi" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">دستگاه کارت‌خوان</label>
+                    <select class="form-control" ng-model="filter.cardreader" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">مناسب برای قرار گروهی</label>
+                    <select class="form-control" ng-model="filter.suitablegroups" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="" class="ng-binding">همه</option>
+                        <option value="بله، زیر ۱۰ نفر">بله، زیر ۱۰ نفر</option>
+                        <option value="بله، ۱۰ نفر">بله، ۱۰ نفر</option>
+                        <option value="بله، زیر ۲۰ نفر">بله، زیر ۲۰ نفر</option>
+                        <option value="بله، ۲۰ نفر">بله، ۲۰ نفر</option>
+                        <option value="بله، بالای ۲۰ نفر">بله، بالای ۲۰ نفر</option>
+                        <option value="خیر">خیر</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">بیرون‌بر</label>
+                    <select class="form-control" ng-model="filter.takeaway" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">غذا</label>
+                    <select class="form-control" ng-model="filter.food" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">صبحانه</label>
+
+                    <select class="form-control" ng-model="filter.breakfast" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="صبحانه سبک دارد(کیک و ...)">صبحانه سبک دارد(کیک و ...)</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">سیگار کشیدن</label>
+                    <select class="form-control" ng-model="filter.nosmoke" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="" class="ng-binding">همه</option>
+                        <option value="فضای مخصوص دارد">فضای مخصوص دارد</option>
+                        <option value="فقط در قسمت فضای باز">فقط در قسمت فضای باز</option>
+                        <option value="آزاد است">آزاد است</option>
+                        <option value="آزاد نیست">آزاد نیست</option>
+                        <option value="عصر به بعد">عصر به بعد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">قهوه موج سوم</label>
+                    <select class="form-control" ng-model="filter.thirdwavecoffee" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">فضای ویژه VIP</label>
+                    <select class="form-control" ng-model="filter.vip" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="ng-binding">بازی و سرگرمی</label>
+                    <select class="form-control" ng-model="filter.game" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                        <option value="">همه</option>
+                        <option value="دارد">دارد</option>
+                        <option value="ندارد">ندارد</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="clearfix category-list">
+            <div class="page-header">
+                <h3>{{'CATEGORY_LIST' | translate}}</h3>
+            </div>
+            <div class="clearfix">
+                <div class="pi-item-category"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-9">
+        <div class="clearfix">
+            <div class="page-header">
+                <h1>{{condition.title}}</h1>
+            </div>
+            <div ng-show="items.length">
+                <div class="row">
+                    <div ng-repeat="item in items">
+                        <div class="col-xs-4 pi-item-box">
+                            <div class="thumbnail p-item h-card">
+                                <div class="hover-style">
+                                    <a class="u-url with-min-price {{item.ribbon_class}}" itemprop="url"
+                                       title="{{item.title}}" data-ng-href="{{item.itemUrl}}" target="_blank">
+                                        <img itemprop="image" class="img-responsive u-photo" src="#"
+                                             data-ng-src="{{item.mediumUrl}}" alt="{{item.title}}">
+                                        <p data-ng-if="item.ribbon">
+                                            <span>{{item.ribbon}}</span>
+                                        </p>
+                                        <div data-ng-if="item.min_price" class="item-price">
+                                            <ul class="list-unstyled">
+                                                <li class="item-price-from">{{'MIN_PRICE' | translate}}</li>
+                                                <li class="item-price-price"><span data-ng-if="item.deal"><del
+                                                        class="small">{{item.reference_price}}</del></span>
+                                                    {{item.min_price}}
+                                                </li>
+                                                <li class="item-price-service" data-ng-if="item.main_service">
+                                                    {{item.main_service}}
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </a>
+                                    <div class="caption">
+                                        <h2 class="p-name" itemprop="name">
+                                            <a class="u-url" itemprop="url" title="{{item.title}}"
+                                               data-ng-href="{{item.itemUrl}}" target="_blank">
+                                                {{item.title}}
+                                            </a>
+                                        </h2>
+                                        <div class="itemInfo p-adr">
+                                            <strong>{{'CITY' | translate}}</strong> :
+                                            <span class="p-locality">{{item.city}}</span>
+                                            <span data-ng-if="item.area"
+                                                  class="p-street-address"> | {{item.area}}</span>
+                                        </div>
+                                        <div class="clearfix" itemprop="description">
+                                            <div data-ng-if="item.item_type == 'route'">
+                                                <div data-ng-if="item.difficulty" class="itemInfo">
+                                                    <strong>{{'DIFFICULTY' | translate}}</strong> : {{item.difficulty}}
+                                                </div>
+                                                <div data-ng-if="item.duration" class="itemInfo">
+                                                    <strong>{{'DURATION' | translate}}</strong> : {{item.duration_view}}
+                                                </div>
+                                                <div data-ng-if="item.elevation_end" class="itemInfo">
+                                                    <strong>{{'ELEVATION' | translate}}</strong> :
+                                                    {{item.elevation_end}}
+                                                </div>
+                                            </div>
+                                            <div data-ng-if="item.item_type == 'poi'">
+                                                <div data-ng-if="item.elevation_end" class="itemInfo">
+                                                    <strong>{{'ELEVATION' | translate}}</strong> :
+                                                    {{item.elevation_end}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="h-geo hidden" itemprop="geo" itemscope
+                                             itemtype="https://schema.org/GeoCoordinates">
+                                            <span itemprop="latitude" class="p-latitude">{{item.map_latitude}}</span>,
+                                            <span itemprop="longitude" class="p-longitude">{{item.map_longitude}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pi-paginator">
+                    <pagination ng-if="paginator.count > paginator.limit"
+                                total-items="paginator.count" page="paginator.page" max-size="10"
+                                previous-text="&lsaquo;" next-text="&rsaquo;" first-text="&laquo;" last-text="&raquo;"
+                                boundary-links="true" items-per-page="paginator.limit">
+                    </pagination>
+                </div>
+            </div>
+            <div class="alert alert-info" ng-if="!items.length">
+                {{'NONE_ITEM' | translate}}
+            </div>
+        </div>
+    </div>
+</div>
