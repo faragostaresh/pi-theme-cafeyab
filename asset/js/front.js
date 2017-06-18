@@ -1,70 +1,21 @@
 (function ($) {
-    $(document).ready(function ($) {
-        $('.guide-block .owl-carousel').owlCarousel({
-            margin: 3,
-            nav: true,
-            rtl: true,
-            autoplay: true,
-            dots: false,
-            autoplayTimeout: 12000,
-            autoplayHoverPause: true,
-            navText: ['<i class="owl-prev fa fa-angle-left"></i>', '<i class="owl-next fa fa-angle-right"></i>'],
-            responsive: {
-                0: {items: 2},
-                400: {items: 3},
-                600: {items: 3},
-                1000: {items: 4}
-            }
-        })
-    });
-
-    $(document).ready(function ($) {
-        $('.shop-block-product .owl-carousel').owlCarousel({
-            margin: 3,
-            nav: true,
-            rtl: true,
-            autoplay: true,
-            dots: false,
-            autoplayTimeout: 12000,
-            autoplayHoverPause: true,
-            navText: ['<i class="owl-prev fa fa-angle-left"></i>', '<i class="owl-next fa fa-angle-right"></i>'],
-            responsive: {
-                0: {items: 2},
-                400: {items: 3},
-                600: {items: 3},
-                1000: {items: 4}
-            }
-        })
-    });
-
-    $(document).ready(function ($) {
-        $('.shop-block-special .owl-carousel').owlCarousel({
-            margin: 3,
-            nav: true,
-            rtl: true,
-            autoplay: true,
-            dots: false,
-            autoplayTimeout: 12000,
-            autoplayHoverPause: true,
-            navText: ['<i class="owl-prev fa fa-angle-left"></i>', '<i class="owl-next fa fa-angle-right"></i>'],
-            responsive: {
-                0: {items: 2},
-                400: {items: 3},
-                600: {items: 2},
-                1000: {items: 2}
-            }
-        })
-    });
-
     $(document).ready(function () {
-        $('.hover-captions').hover(
-            function () {
-                $(this).find('.hover-caption').slideDown(250);
-            },
-            function () {
-                $(this).find('.hover-caption').slideUp(250);
+        //Fix navbar multiple level
+        var navbar = $('.pi-navbar-nav');
+        var hasBrand = navbar.parents('.navbar').find('.navbar-brand').length;
+        navbar.find('>li').each(function () {
+            var $this = $(this);
+            var caretStr = '<span class="pi-navbar-caret"></span>';
+            caretStr += '<span class="pi-navbar-caret pi-navbar-caret-outer"></span>';
+            if ($this.find('li').length) {
+                $this.append(caretStr);
             }
-        );
+        });
+        navbar.find('ul').addClass('dropdown-menu');
+
+        if (!hasBrand) {
+            navbar.css('marginLeft', '-15px');
+        }
     });
 
     $(document).ready(function () {
@@ -97,12 +48,6 @@
             $(".search-results").fadeOut(500);
         }).focus(function () {
             $(".search-results").show().append('<li><a>در حال جستجو ...</a></li>');
-        });
-    });
-
-    $(document).ready(function () {
-        $(".dropdown-toggle-shop").click(function () {
-            window.open("https://www.cafeyab.com/shop");
         });
     });
 })(jQuery)
