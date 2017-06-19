@@ -563,7 +563,7 @@ form .icon-question-sign {
 }
 
 .pi-header .pi-header-body {
-    background-color: #333;
+    background: #333;
 }
 
 .pi-header-search {
@@ -571,11 +571,12 @@ form .icon-question-sign {
 }
 
 #pi-system .pi-header h1 {
-    font-size: 2.2em;
+    font-size: 2.2em !important;
 }
 
 #pi-system .pi-header h2 {
    line-height: 2.5em;
+    font-size: 1.5em !important;
     font-weight: normal;
 }
 
@@ -584,6 +585,7 @@ form .icon-question-sign {
     z-index: 1000;
     width: 100%;
     height: auto;
+    background: none;
 }
 
 @media (min-width: 768px) {
