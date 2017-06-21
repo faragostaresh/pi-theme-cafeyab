@@ -18,6 +18,22 @@
         }
     });
 
+    $(document).ready(function() {
+        var stickyNavTop = $('.pi-header-nav').offset().top;
+        var stickyNav = function(){
+            var scrollTop = $(window).scrollTop();
+            if (scrollTop > stickyNavTop) {
+                $('.pi-header-nav').addClass('sticky');
+            } else {
+                $('.pi-header-nav').removeClass('sticky');
+            }
+        };
+        stickyNav();
+        $(window).scroll(function() {
+            stickyNav();
+        });
+    });
+
     $(document).ready(function () {
         var length = 2;
         var timer = null;
