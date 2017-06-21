@@ -357,11 +357,22 @@ form .icon-question-sign {
 }
 
 /* header */
+.pi-header {
+    color: #fff;
+}
+.pi-header a {
+    color: #fff;
+}
+.pi-header a:hover,
+.pi-header a:focus {
+    color: #fff;
+}
+
 .pi-header h1,
 .pi-header h2 {
     padding: 1px;
     margin: 1px;
-    font-size: 35px;
+    font-size: 25px;
     color: #fff;
 }
 
@@ -396,7 +407,7 @@ form .icon-question-sign {
 }
 
 .pi-header .pi-header-body {
-    background: #333;
+    background: #3e2723;
 }
 
 .pi-header .pi-header-search {
@@ -417,6 +428,11 @@ form .icon-question-sign {
         z-index: 100;
         border-top: 0;
         height: 45px;
+    }
+
+    .navbar-right {
+        float: right !important;
+        text-align: right !important;
     }
 }
 
@@ -516,6 +532,26 @@ form .icon-question-sign {
 .pi-footer .pi-footer-copyright {
     padding: 25px 0;
     background-color: #2f1c14;
+}
+
+.pi-footer h5 {
+    border-bottom: 1px solid  #2f1c14;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .pi-footer h5 {
+        text-align: center;
+    }
+
+    .pi-footer .list-unstyled {
+        text-align: center;
+    }
+
+    .pi-footer .pi-footer-copyright .col-xs-12 {
+        text-align: center !important;
+    }
 }
 
 /* social */
