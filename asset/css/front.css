@@ -402,6 +402,13 @@ form .icon-question-sign {
     color: #9B0606;
 }
 
+.pi-header .navbar-inverse .navbar-nav > .active > a,
+.pi-header .navbar-inverse .navbar-nav > .active > a:hover,
+.pi-header .navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: rgba(155, 6, 6, 0.8);
+}
+
 .pi-header .pi-header-image {
     position: relative;
 }

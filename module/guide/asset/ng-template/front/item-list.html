@@ -1,5 +1,5 @@
 <div class="clearfix pi-item-list">
-    <div class="col-xs-3">
+    <div class="col-md-3 col-xs-12">
         <div class="pi-item-search-form clearfix well well-sm">
             <div class="page-header">
                 <h3>{{'SEARCH' | translate}}</h3>
@@ -119,7 +119,7 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-9">
+    <div class="col-md-9 col-xs-12">
         <div class="clearfix">
             <div class="page-header">
                 <h1>{{condition.title}}</h1>
@@ -127,7 +127,7 @@
             <div ng-show="items.length">
                 <div class="row">
                     <div ng-repeat="item in items">
-                        <div class="col-xs-4 pi-item-box">
+                        <div class="col-md-4 col-xs-12 pi-item-box">
                             <div class="thumbnail p-item h-card">
                                 <div class="hover-style">
                                     <a class="u-url with-min-price {{item.ribbon_class}}" itemprop="url"
