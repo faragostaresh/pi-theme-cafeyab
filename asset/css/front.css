@@ -44,6 +44,16 @@ h5, h6 {
     font-family: 'Vazir-Bold';
 }
 
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../image/loader.gif') 50% 50% no-repeat #fff;
+}
+
 /* Bootstrap custom */
 .nav-tabs {
     margin-bottom: 20px;

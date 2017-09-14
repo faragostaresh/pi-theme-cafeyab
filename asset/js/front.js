@@ -66,4 +66,21 @@
             $(".search-results").show().append('<li><a>در حال جستجو ...</a></li>');
         });
     });
+
+    $(document).ready(function(){
+        var iOS = false,
+            p = navigator.platform;
+        if( p == 'iPad' || p == 'iPhone' || p == 'iPod' ) {
+            iOS = true;
+        }
+        if (iOS == true) {
+            $(".guide-custom-map").hide();
+        }
+    });
+
+    $(document).ready(function(){
+        $(window).load(function() {
+            $(".loader").fadeOut("slow");
+        });
+    });
 })(jQuery)
