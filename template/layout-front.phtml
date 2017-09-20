@@ -1,8 +1,4 @@
 <?php
-// Set cdn url
-// After each update need build new folder and copy file on it, after that update this url
-$assetThemeUrl = Pi::url('upload/theme/v170920');
-
 // Set doctype explicitly if it is not `HTML4_LOOSE`, i.e. 'HTML 4.01 Transitional'
 $this->doctype('HTML5');
 
@@ -29,37 +25,37 @@ $this->bootstrap(array(
 ));
 
 // Load front.css
-$this->css($assetThemeUrl . '/css/front.css');
+$this->css($this->assetTheme('css/front.css'));
 
 // Load localization css
 $this->css($this->assetLocale('locale.css'));
 
 // Load front.js on footer
-$this->footScript()->appendFile($assetThemeUrl . '/js/front.js');
+$this->footScript()->appendFile($this->assetTheme('js/front.js'));
 
 // Apple icons
 // Apple icon for iphone
 $this->headLink(array(
     'rel'   => 'apple-touch-icon',
-    'href'  => $assetThemeUrl . '/image/touch-icon-iphone.png'
+    'href'  => $this->assetTheme('image/touch-icon-iphone.png')
 ));
 // Apple icon for ipad
 $this->headLink(array(
     'rel'   => 'apple-touch-icon',
     'sizes' => '72x72',
-    'href'  => $assetThemeUrl . '/image/touch-icon-ipad.png'
+    'href'  => $this->assetTheme('image/touch-icon-ipad.png')
 ));
 // Apple icon for iphone retina
 $this->headLink(array(
     'rel'   => 'apple-touch-icon',
     'sizes' => '114x114',
-    'href'  => $assetThemeUrl . '/image/touch-icon-iphone-retina.png'
+    'href'  => $this->assetTheme('image/touch-icon-iphone-retina.png')
 ));
 // Apple icon for ipad retina
 $this->headLink(array(
     'rel'   => 'apple-touch-icon',
     'sizes' => '114x114',
-    'href'  => $assetThemeUrl . '/image/touch-icon-ipad-retina.png'
+    'href'  => $this->assetTheme('image/touch-icon-ipad-retina.png')
 ));
 
 // Meta Viewport Tag
@@ -108,7 +104,6 @@ $breadcrumbs = $this->breadcrumb(
 </head>
 <body id="pi-<?php echo $module; ?>" class="pi-locale-<?php echo $locale; ?> pi-front">
 <?php if ($module == 'system') { ?>
-    <div class="loader"></div>
     <header class="pi-header">
         <div class="pi-header-body">
             <div class="pi-header-nav navbar navbar-inverse clearfix">
@@ -181,7 +176,7 @@ $breadcrumbs = $this->breadcrumb(
                             <div class="pi-header-box">
                                 <div class="clearfix ">
                                     <a href="https://www.cafeyab.com" title="<?php echo _escape($sitename); ?>" rel="home">
-                                        <img src="<?php echo $assetThemeUrl . '/image/logo-home.png'; ?>" alt="<?php echo _escape($sitename); ?>">
+                                        <img src="<?php echo $this->assetTheme('image/logo-home.png'); ?>" alt="<?php echo _escape($sitename); ?>">
                                     </a>
                                 </div>
                                 <h1>کافه یاب</h1>
@@ -210,14 +205,14 @@ $breadcrumbs = $this->breadcrumb(
                     <div class="active item">
                         <picture>
                             <!--[if IE 9]><video style="display: none;"><![endif]-->
-                            <source data-srcset="<?php echo $assetThemeUrl . '/image/header/header-mobi.jpg'; ?>" media="(max-width: 320px)" srcset="<?php echo $assetThemeUrl . '/image/header/header-mobi.jpg'; ?>">
-                            <source data-srcset="<?php echo $assetThemeUrl . '/image/header/header-smart.jpg'; ?>" media="(max-width: 480px)" srcset="<?php echo $assetThemeUrl . '/image/header/header-smart.jpg'; ?>">
-                            <source data-srcset="<?php echo $assetThemeUrl . '/image/header/header-tab.jpg'; ?>" media="(max-width: 768px)" srcset="<?php echo $assetThemeUrl . '/image/header/header-tab.jpg'; ?>">
-                            <source data-srcset="<?php echo $assetThemeUrl . '/image/header/header-lap.jpg'; ?>" media="(max-width: 1366px)" srcset="<?php echo $assetThemeUrl . '/image/header/header-lap.jpg'; ?>">
-                            <source data-srcset="<?php echo $assetThemeUrl . '/image/header/header-xlap.jpg'; ?>" media="(max-width: 1920px)" srcset="<?php echo $assetThemeUrl . '/image/header/header-xlap.jpg'; ?>">
-                            <source data-srcset="<?php echo $assetThemeUrl . '/image/header/header-desk.jpg'; ?>" media="(max-width: 2880px)" srcset="<?php echo $assetThemeUrl . '/image/header/header-desk.jpg'; ?>">
+                            <source data-srcset="<?php echo $this->assetTheme('image/header/header-mobi.jpg'); ?>" media="(max-width: 320px)" srcset="<?php echo $this->assetTheme('image/header/header-mobi.jpg'); ?>">
+                            <source data-srcset="<?php echo $this->assetTheme('image/header/header-smart.jpg'); ?>" media="(max-width: 480px)" srcset="<?php echo $this->assetTheme('image/header/header-smart.jpg'); ?>">
+                            <source data-srcset="<?php echo $this->assetTheme('image/header/header-tab.jpg'); ?>" media="(max-width: 768px)" srcset="<?php echo $this->assetTheme('image/header/header-tab.jpg'); ?>">
+                            <source data-srcset="<?php echo $this->assetTheme('image/header/header-lap.jpg'); ?>" media="(max-width: 1366px)" srcset="<?php echo $this->assetTheme('image/header/header-lap.jpg'); ?>">
+                            <source data-srcset="<?php echo $this->assetTheme('image/header/header-xlap.jpg'); ?>" media="(max-width: 1920px)" srcset="<?php echo $this->assetTheme('image/header/header-xlap.jpg'); ?>">
+                            <source data-srcset="<?php echo $this->assetTheme('image/header/header-desk.jpg'); ?>" media="(max-width: 2880px)" srcset="<?php echo $this->assetTheme('image/header/header-desk.jpg'); ?>">
                             <!--[if IE 9]></video><![endif]-->
-                            <img class="img-responsive lazyloaded" data-src="<?php echo $assetThemeUrl . '/image/header/header-xlap.jpg'; ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $assetThemeUrl . '/image/header/header-xlap.jpg'; ?>">
+                            <img class="img-responsive lazyloaded" data-src="<?php echo $this->assetTheme('image/header/header-xlap.jpg'); ?>" alt="<?php echo _escape($sitename); ?>" src="<?php echo $this->assetTheme('image/header/header-xlap.jpg'); ?>">
                         </picture>
                     </div>
                 </div>
@@ -525,7 +520,7 @@ $breadcrumbs = $this->breadcrumb(
                     <div class="col-md-4">
                         <h2>
                             <a href="https://www.cafeyab.com" title="<?php echo _escape($sitename); ?>">
-                                <img src="<?php echo $assetThemeUrl . '/image/logo.png'; ?>" alt="<?php echo _escape($sitename); ?>">
+                                <img src="<?php echo $this->assetTheme('image/logo.png'); ?>" alt="<?php echo _escape($sitename); ?>">
                                 <?php echo _escape($sitename); ?>
                             </a>
                         </h2>
@@ -673,25 +668,25 @@ $breadcrumbs = $this->breadcrumb(
                     <h2>نرم افزار تلفن همراه کافه یاب</h2>
                 </div>
                 <div class="col-md-6 col-sm-6 col-xs-12">
-                    <img class="img-responsive" src="<?php echo $assetThemeUrl . '/image/app-img.png'; ?>" alt="نرم افزار تلفن همراه کافه یاب">
+                    <img class="img-responsive" src="<?php echo $this->assetTheme('image/app-img.png'); ?>" alt="نرم افزار تلفن همراه کافه یاب">
                 </div>
                 <div class="pi-section-app-text col-md-6 col-sm-6 col-xs-12 text-center">
                     <p class="text-center">نرم افزار اندروید کافه یاب را از گوگل پلی و نرم افزار  آی او اس را از اپ استور دریافت نمایید.</p>
                     <ul class="list-inline">
                         <li>
                             <a href="https://play.google.com/store/apps/details?id=com.faragostaresh.cafeyab" title="دریافت از گوگل پلی" >
-                                <img src="<?php echo $assetThemeUrl . '/image/app-android.png'; ?>" alt="دریافت از گوگل پلی">
+                                <img src="<?php echo $this->assetTheme('image/app-android.png'); ?>" alt="دریافت از گوگل پلی">
                             </a>
                         </li>
                         <li>
                             <a href="https://itunes.apple.com/us/app/cafeyab-kafh-yab/id1071729005?ls=1&mt=8" title="دریافت از اپ استور" >
-                                <img src="<?php echo $assetThemeUrl . '/image/app-ios.png'; ?>" alt="دریافت از اپ استور">
+                                <img src="<?php echo $this->assetTheme('image/app-ios.png'); ?>" alt="دریافت از اپ استور">
                             </a>
                         </li>
                     </ul>
                     <ul class="list-inline">
                         <li>
-                            <img class="img-responsive" src="<?php echo $assetThemeUrl . '/image/behpardakht.png'; ?>" alt="به پرداخت">
+                            <img class="img-responsive" src="<?php echo $this->assetTheme('image/behpardakht.png'); ?>" alt="به پرداخت">
                         </li>
                         <li>
                             <img class="img-responsive" id='wmcshwlanbpedrft' onclick='window.open("https://trustseal.enamad.ir/Verify.aspx?id=8421&p=aqgwodshwkynnbpd", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")' alt='نماد اعتماد الکترونیک' src='https://trustseal.enamad.ir/logo.aspx?id=8421&p=ukaqaodsqesglznb'/>
