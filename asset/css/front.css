@@ -916,3 +916,9 @@ form .icon-question-sign {
 .recent-event-single img {
     padding-top: 2px;
 }
+
+@media (max-width: 767px) {
+    .pi-section .pi-module-content img {
+        max-width: 90% !important;
+    }
+}
