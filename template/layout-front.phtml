@@ -495,6 +495,13 @@ $breadcrumbs = $this->breadcrumb(
                                     </div>
                                 </div>
                             </div>
+                            <?php if (isset($blocks['7'])) { ?>
+                                <div class="pi-zone-7">
+                                    <?php foreach ($blocks['7'] as $block) {
+                                        include $blockTemplate;
+                                    } ?>
+                                </div>
+                            <?php } ?>
                         </div>
                         <div class="col-md-7">
                             <?php foreach ($blocks['0'] as $block) {
@@ -579,19 +586,6 @@ $breadcrumbs = $this->breadcrumb(
                     <div class="row">
                         <div class="col-md-12">
                             <?php foreach ($blocks['99'] as $block) {
-                                include $blockTemplate;
-                            } ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <?php } ?>
-        <?php if (isset($blocks['7'])) { ?>
-            <div class="pi-zone-7">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <?php foreach ($blocks['7'] as $block) {
                                 include $blockTemplate;
                             } ?>
                         </div>

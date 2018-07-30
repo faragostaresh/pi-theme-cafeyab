@@ -714,7 +714,7 @@ form .icon-question-sign {
 
 @media (min-width: 768px) {
     .guide-block {
-        height: 200px !important;
+        min-height: 200px !important;
     }
 
     .guide-block img {
